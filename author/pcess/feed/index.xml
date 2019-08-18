@@ -11,8 +11,8 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
 
 <channel>
 	<title>pcess</title>
-	<atom:link href="/author/pcess/feed/" rel="self" type="application/rss+xml" />
-	<link>/</link>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../../../index.html</link>
 	<description>Parallel Computing for Embedded Sensor Systems</description>
 	<lastBuildDate>Fri, 05 May 2017 07:12:28 +0000</lastBuildDate>
 	<language>en-US</language>
@@ -23,25 +23,25 @@ xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01
 	<generator>https://wordpress.org/?v=5.2.2</generator>
 <site xmlns="com-wordpress:feed-additions:1">119721859</site>	<item>
 		<title>Assembling and Parameters Setup for DJI NAZA-F450 Quadcopter</title>
-		<link>/assembling-parameters-setup-quadcopter-dji-naza-f450/</link>
+		<link>./../../../assembling-parameters-setup-quadcopter-dji-naza-f450/index.html</link>
 				<pubDate>Mon, 13 Mar 2017 14:25:20 +0000</pubDate>
 		<dc:creator><![CDATA[pcess]]></dc:creator>
 				<category><![CDATA[Tutorials]]></category>
 
-		<guid isPermaLink="false">/?p=1285</guid>
+		<guid isPermaLink="false">./../../../index.html?p=1285</guid>
 				<description><![CDATA[Assembling and Parameters Setup for DJI NAZA-F450 with FUTABA T10J Transmitter and R3008SB Receiver. Download Manual]]></description>
 								<content:encoded><![CDATA[<p>Assembling and Parameters Setup for DJI NAZA-F450 with FUTABA T10J Transmitter and R3008SB Receiver. </p>
-<p><a href="/raw/FUTABA_TJ10_Installation.pdf">Download Manual</a></p>
+<p><a href="./../../../raw/FUTABA_TJ10_Installation.pdf">Download Manual</a></p>
 ]]></content:encoded>
 									<post-id xmlns="com-wordpress:feed-additions:1">1285</post-id>	</item>
 		<item>
 		<title>Setting up an Android Development Environment in Windows with Eclipse</title>
-		<link>/setting-android-development-environment-windows-eclipse/</link>
+		<link>./../../../setting-android-development-environment-windows-eclipse/index.html</link>
 				<pubDate>Wed, 01 Feb 2017 10:19:00 +0000</pubDate>
 		<dc:creator><![CDATA[pcess]]></dc:creator>
 				<category><![CDATA[Tutorials]]></category>
 
-		<guid isPermaLink="false">/?p=1236</guid>
+		<guid isPermaLink="false">./../../../index.html?p=1236</guid>
 				<description><![CDATA[WARNING: In the above video, the cursor is recorded in a slightly offset position, so sometimes it may look like I am selecting a 32 bit install instead of a 64 bit install. In any case, always select the download that matches your computer. Here we will show you how to setup Eclipse for Android [&#8230;]]]></description>
 								<content:encoded><![CDATA[<p><iframe class='youtube-player' type='text/html' width='1170' height='659' src='https://www.youtube.com/embed/FhwcwKpRDLw?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
 <blockquote><p>WARNING: In the above video, the cursor is recorded in a slightly offset position, so sometimes it may look like I am selecting a 32 bit install instead of a 64 bit install. In any case, always select the download that matches your computer.</p></blockquote>
@@ -128,12 +128,12 @@ To actually add Cygwin to the system path, we will now add <code>%PATH_CYGWIN%</
 									<post-id xmlns="com-wordpress:feed-additions:1">1236</post-id>	</item>
 		<item>
 		<title>Networked Android Sensor Data</title>
-		<link>/networked-android-sensor-data/</link>
+		<link>./../../../networked-android-sensor-data/index.html</link>
 				<pubDate>Mon, 16 Jan 2017 11:09:36 +0000</pubDate>
 		<dc:creator><![CDATA[pcess]]></dc:creator>
 				<category><![CDATA[Tutorials]]></category>
 
-		<guid isPermaLink="false">/?p=1193</guid>
+		<guid isPermaLink="false">./../../../index.html?p=1193</guid>
 				<description><![CDATA[Background SensorEvents are the fundamental objects in the Android Sensor API for transmitting sensor data from the IMU to your application, whether they be accelerometer measurements (TYPE_ACCELEROMETER), gyroscope measurements (TYPE_GYROSCOPE), or some other sensor measurements. However, if you plan to use SensorEvents in a networked application, you will find that SensorEvents quickly turn out to [&#8230;]]]></description>
 								<content:encoded><![CDATA[<h3>Background</h3>
 <p><a href="https://developer.android.com/reference/android/hardware/SensorEvent.html" target="_blank">SensorEvents</a> are the fundamental objects in the Android Sensor API for transmitting sensor data from the IMU to your application, whether they be accelerometer measurements (<code>TYPE_ACCELEROMETER</code>), gyroscope measurements (<code>TYPE_GYROSCOPE</code>), or some other sensor measurements. However, if you plan to use SensorEvents in a networked application, you will find that SensorEvents quickly turn out to be a pain to work with. That is because, under the auspices of privacy, Google has tried its best to deter you from using SensorEvents in networked applications.</p>
@@ -345,12 +345,12 @@ public class SimpleEvent implements Serializable {
 									<post-id xmlns="com-wordpress:feed-additions:1">1193</post-id>	</item>
 		<item>
 		<title>Compressing and decompressing multiple input arguments in Matlab/Octave</title>
-		<link>/compressing-decompressing-multiple-input-arguments-matlaboctave/</link>
+		<link>./../../../compressing-decompressing-multiple-input-arguments-matlaboctave/index.html</link>
 				<pubDate>Mon, 28 Nov 2016 10:50:12 +0000</pubDate>
 		<dc:creator><![CDATA[pcess]]></dc:creator>
 				<category><![CDATA[Tutorials]]></category>
 
-		<guid isPermaLink="false">/?p=989</guid>
+		<guid isPermaLink="false">./../../../index.html?p=989</guid>
 				<description><![CDATA[Many functions in Matlab/Octave (particularly integration and optimization functions), are designed to accept function handles that only take a single vector input, that is, function handles of the form g(x). Hence anytime you want to use a function with multiple input arguments, such as you need to write custom boilerplate code to make it work. [&#8230;]]]></description>
 								<content:encoded><![CDATA[<p>Many functions in Matlab/Octave (particularly integration and optimization functions), are designed to accept function handles that only take a single vector input, that is, function handles of the form <code>g(x)</code>. Hence anytime you want to use a function with multiple input arguments, such as</p>
 <p><script src="http://gist-it.appspot.com/https://github.com/pcess/tutorials/blob/master/OctaveCompressDecompress/f.m?footer=none"></script></p>
@@ -399,12 +399,12 @@ xyz0 = press( 'xyZ', xy0, z0 );
 									<post-id xmlns="com-wordpress:feed-additions:1">989</post-id>	</item>
 		<item>
 		<title>A smart Android splash screen for grabbing permissions</title>
-		<link>/smart-android-splash-screen-grabbing-permissions/</link>
+		<link>./../../../smart-android-splash-screen-grabbing-permissions/index.html</link>
 				<pubDate>Mon, 21 Nov 2016 14:19:18 +0000</pubDate>
 		<dc:creator><![CDATA[pcess]]></dc:creator>
 				<category><![CDATA[Tutorials]]></category>
 
-		<guid isPermaLink="false">/?p=878</guid>
+		<guid isPermaLink="false">./../../../index.html?p=878</guid>
 				<description><![CDATA[Before Android 6.0, app permissions were relatively easy to handle&#8230; A user had to grant permissions during installation, or else an app could not be installed. However, starting in Android 6.0, a user can either deny specific app permissions during installation, or revoke them after install. Although this is useful from a user&#8217;s point of [&#8230;]]]></description>
 								<content:encoded><![CDATA[<p><iframe class='youtube-player' type='text/html' width='1170' height='659' src='https://www.youtube.com/embed/mk2t9roTrQE?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
 <p>Before Android 6.0, app permissions were relatively easy to handle&#8230; A user had to grant permissions during installation, or else an app could not be installed.</p>

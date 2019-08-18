@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="/xmlrpc.php">
+	
+<title>Setting up an Android Development Environment in Windows with Eclipse</title>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="/feed/" />
+		<script type="3e25ec62f413088dc6bd3b95-text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='sydney-bootstrap-css'  href='/wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-au-css'  href='/wp-content/plugins/youtube-channel/assets/lib/magnific-popup/magnific-popup.min.css?ver=3.0.11.8' type='text/css' media='all' />
+<link rel='stylesheet' id='youtube-channel-css'  href='/wp-content/plugins/youtube-channel/assets/css/youtube-channel.css?ver=3.0.11.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sydney-heading-and-body-fonts-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C400italic%2C600%7CRaleway%3A400%2C500%2C600&#038;ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sydney-style-css'  href='/wp-content/themes/sydney/style.css?ver=5.2.2' type='text/css' media='all' />
+<style id='sydney-style-inline-css' type='text/css'>
+.site-title { font-size:24px; }
+.site-description { font-size:24px; }
+#mainnav ul li a { font-size:14px; }
+h1 { font-size:52px; }
+h2 { font-size:42px; }
+h3 { font-size:32px; }
+h4 { font-size:25px; }
+h5 { font-size:20px; }
+h6 { font-size:18px; }
+body { font-size:14px; }
+.header-image { background-size:cover;}
+.header-image { height:300px; }
+.header-wrap .col-md-6, .header-wrap .col-md-12, .header-wrap .col-md-4, .header-wrap .col-md-8 { width: 100%; text-align: center;}
+#mainnav { float: none;}
+#mainnav li { float: none; display: inline-block;}
+#mainnav ul ul li { display: block; text-align: left; float:left;}
+.site-logo, .header-wrap .col-md-4 { margin-bottom: 15px; }
+.btn-menu { margin: 0 auto; float: none; }
+.header-wrap .container > .row { display: block; }
+.widget-area .widget_fp_social a,#mainnav ul li a:hover, .sydney_contact_info_widget span, .roll-team .team-content .name,.roll-team .team-item .team-pop .team-social li:hover a,.roll-infomation li.address:before,.roll-infomation li.phone:before,.roll-infomation li.email:before,.roll-testimonials .name,.roll-button.border,.roll-button:hover,.roll-icon-list .icon i,.roll-icon-list .content h3 a:hover,.roll-icon-box.white .content h3 a,.roll-icon-box .icon i,.roll-icon-box .content h3 a:hover,.switcher-container .switcher-icon a:focus,.go-top:hover,.hentry .meta-post a:hover,#mainnav > ul > li > a.active, #mainnav > ul > li > a:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .text-color, .social-menu-widget a, .social-menu-widget a:hover, .archive .team-social li a, a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color:#1e73be}
+.project-filter li a.active, .project-filter li a:hover,.preloader .pre-bounce1, .preloader .pre-bounce2,.roll-team .team-item .team-pop,.roll-progress .progress-animate,.roll-socials li a:hover,.roll-project .project-item .project-pop,.roll-project .project-filter li.active,.roll-project .project-filter li:hover,.roll-button.light:hover,.roll-button.border:hover,.roll-button,.roll-icon-box.white .icon,.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span,.go-top,.bottom .socials li:hover a,.sidebar .widget:before,.blog-pagination ul li.active,.blog-pagination ul li:hover a,.content-area .hentry:after,.text-slider .maintitle:after,.error-wrap #search-submit:hover,#mainnav .sub-menu li:hover > a,#mainnav ul li ul:after, button, input[type="button"], input[type="reset"], input[type="submit"], .panel-grid-cell .widget-title:after { background-color:#1e73be}
+.roll-socials li a:hover,.roll-socials li a,.roll-button.light:hover,.roll-button.border,.roll-button,.roll-icon-list .icon,.roll-icon-box .icon,.owl-theme .owl-controls .owl-page span,.comment .comment-detail,.widget-tags .tag-list a:hover,.blog-pagination ul li,.hentry blockquote,.error-wrap #search-submit:hover,textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus, button, input[type="button"], input[type="reset"], input[type="submit"], .archive .team-social li a { border-color:#1e73be}
+.site-header.float-header { background-color:rgba(0,0,0,0.9);}
+@media only screen and (max-width: 1024px) { .site-header { background-color:#000000;}}
+.site-title a, .site-title a:hover { color:#ffffff}
+.site-description { color:#ffffff}
+#mainnav ul li a, #mainnav ul li::before { color:#1e73be}
+#mainnav .sub-menu li a { color:#ffffff}
+#mainnav .sub-menu li a { background:#ffffff}
+.text-slider .maintitle, .text-slider .subtitle { color:#0066bf}
+body { color:#767676}
+#secondary { background-color:#ffffff}
+#secondary, #secondary a, #secondary .widget-title { color:#767676}
+.footer-widgets { background-color:#252525}
+.site-footer { background-color:#1c1c1c}
+.site-footer,.site-footer a { color:#666666}
+.overlay { background-color:#000000}
+.page-wrap { padding-top:0px;}
+.page-wrap { padding-bottom:0px;}
+
+</style>
+<link rel='stylesheet' id='sydney-font-awesome-css'  href='/wp-content/themes/sydney/fonts/font-awesome.min.css?ver=5.2.2' type='text/css' media='all' />
+<!--[if lte IE 9]>
+<link rel='stylesheet' id='sydney-ie9-css'  href='/wp-content/themes/sydney/css/ie9.css?ver=5.2.2' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='jetpack_css-css'  href='/wp-content/plugins/jetpack/css/jetpack.css?ver=7.6' type='text/css' media='all' />
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Networked Android Sensor Data' href='/networked-android-sensor-data/' />
+<link rel='next' title='Assembling and Parameters Setup for DJI NAZA-F450 Quadcopter' href='/assembling-parameters-setup-quadcopter-dji-naza-f450/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="/setting-android-development-environment-windows-eclipse/" />
+<link rel='shortlink' href='https://wp.me/p86l7J-jW' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsetting-android-development-environment-windows-eclipse%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsetting-android-development-environment-windows-eclipse%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Setting up an Android Development Environment in Windows with Eclipse" />
+<meta property="og:url" content="/setting-android-development-environment-windows-eclipse/" />
+<meta property="og:description" content="WARNING: In the above video, the cursor is recorded in a slightly offset position, so sometimes it may look like I am selecting a 32 bit install instead of a 64 bit install. In any case, always sel…" />
+<meta property="article:published_time" content="2017-02-01T10:19:00+00:00" />
+<meta property="article:modified_time" content="2017-03-07T21:10:44+00:00" />
+<meta property="og:image" content="http://img.youtube.com/vi/FhwcwKpRDLw/0.jpg" />
+<meta property="og:image:secure_url" content="https://img.youtube.com/vi/FhwcwKpRDLw/0.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="Setting up an Android Development Environment in Windows with Eclipse" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+
+<!-- BEGIN ExactMetrics v5.3.8 Universal Analytics - https://exactmetrics.com/ -->
+<script type="3e25ec62f413088dc6bd3b95-text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-81910420-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- END ExactMetrics Universal Analytics -->
+			<link rel="stylesheet" type="text/css" id="wp-custom-css" href="/?custom-css=765b5cb8c2" />
+		</head>
+
+<body class="post-template-default single single-post postid-1236 single-format-standard">
+<div class="preloader">
+    <div class="spinner">
+        <div class="pre-bounce1"></div>
+        <div class="pre-bounce2"></div>
+    </div>
+</div>	
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-wrap">
+            <div class="container">
+                <div class="row">
+				<div class="col-md-12 col-xs-12">
+		        					<h1 class="site-title"><a href="/" rel="home"></a></h1>
+					<h2 class="site-description"><a href="/" rel="home">Parallel Computing for Embedded Sensor Systems</a></h2>	        
+		        				</div>
+				<div class="col-md-12 col-xs-12">
+					<div class="btn-menu"></div>
+					<nav id="mainnav" class="mainnav" role="navigation">
+						<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="/videos/">Videos</a></li>
+<li id="menu-item-1038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1038"><a href="/tutorials/">Tutorials</a></li>
+<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="/publications/">Publications</a></li>
+<li id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="/people/">People</a></li>
+<li id="menu-item-326" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-326"><a href="/about/">About</a></li>
+</ul></div>					</nav><!-- #site-navigation -->
+				</div>
+				</div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+	
+	<div class="header-image">
+		<div class="overlay"></div>		<img class="header-inner" src="" width="1920" alt="">
+	</div>
+
+	<div id="content" class="page-wrap">
+		<div class="container content-wrapper">
+			<div class="row">	
+	
+    <!-- Modified from col-md-9 because we do not want a sidebar -->
+	<div id="primary" class="content-area col-xs-12">
+		<main id="main" class="post-wrap" role="main">
+
+		
+			
+<article id="post-1236" class="post-1236 post type-post status-publish format-standard hentry category-tutorials">
+
+	
+	<header class="entry-header">
+		<h1 class="title-post">Setting up an Android Development Environment in Windows with Eclipse</h1>
+				<div class="meta-post">
+			<span class="posted-on">Posted on <a href="/setting-android-development-environment-windows-eclipse/" rel="bookmark"><time class="entry-date published" datetime="2017-02-01T10:19:00+00:00">February 1, 2017</time><time class="updated" datetime="2017-03-07T21:10:44+00:00">March 7, 2017</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/author/pcess/">pcess</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='1170' height='659' src='https://www.youtube.com/embed/FhwcwKpRDLw?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></p>
+<blockquote><p>WARNING: In the above video, the cursor is recorded in a slightly offset position, so sometimes it may look like I am selecting a 32 bit install instead of a 64 bit install. In any case, always select the download that matches your computer.</p></blockquote>
+<p><hr width="80%"></p>
+<p>Here we will show you how to setup Eclipse for Android development in Windows. We use Eclipse partially for legacy reasons, but also due to the fact that Android Studio builds can be slow, and the fact that Eclipse supports development in Java, C++, and many other languages. I prefer to only have to learn one IDE for all of the programming I work on, and for that reason, I use Eclipse. For example, do you want to go through learning how to use Visual Studio just to learn C++ development, Android studio only for Android projects, and something else for Java development? I don&#8217;t. So here we will walk you through the steps necessary to setup Eclipse for Android development in Windows.</p>
+<p>&nbsp;</p>
+<h3>The Ingredients</h3>
+<p>Here is just a general list of the ingredients&#8230; every piece of software that you need to get your development environment set up. But please, try to install everything in the order I lay out. Otherwise, you may need to do a little bit of troubleshooting:</p>
+<ol>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java JDK</a></li>
+<li><a href="https://git-scm.com/download" target="_blank">Git</a></li>
+<li><a href="https://cygwin.com/install.html" target="_blank">Cygwin (specifically, gcc, g++, and sh)</a></li>
+<li><a href="http://www.7-zip.org/" target="_blank">7-zip</a></li>
+<li><a href="https://www.eclipse.org/downloads/eclipse-packages/" target="_blank">Eclipse for Android Developers</a></li>
+<li><a href="https://developer.android.com/ndk/downloads/index.html" target="_blank">Android NDK (optional, depending on whether your app has C++ components)</a></li>
+</ol>
+<p>&nbsp;</p>
+<h3>Only the finest ingredients&#8230;</h3>
+<p>I will get into the details of how to actually do the setup in the next section. Here I just want to introduce you to what you will be cooking with and why&#8230;</p>
+<ol>
+<li>To build a Java app, you need the Java development kit (JDK)&#8230; and since Android is basically built on Java (I am taking a little artistic liberty for saying this), you need the JDK to build Android apps. Note that many people already have Java on their computers to run website plugins. However, to run these plugins, you only need the Java Runtime (JRE) environment. To compile a Java app, you need the full JDK, which includes the JRE in it. So if you know you have Java installed, but don&#8217;t know if you have the JDK, the answer is almost definitely that you do not. The easiest way to check is to go to the folder &#8220;C:\Program Files\Java&#8221; and see if there is a subfolder starting with <em>jdk</em>. If there isn&#8217;t (if you only have folders starting with <em>jre</em>), then you will need to go get the JDK from the link above.</li>
+<li>Git is not technically a requirement for building Android projects in Windows, but it is extremely helpful. You will often find sample apps that you want to download from Github or a privately-hosted Gitlab server, and the easiest way to get that code is to clone it onto your computer. Specifically, on the landing page for most projects, you will typically find the git prominently displayed, or uncovered by clicking a &#8220;Clone or download&#8221; button. It is a web address that looks like <code>https://github.com/xxxxxx.git</code> To download the code to your computer using git, you simply open a command prompt in the folder where you want the code, and then type <code>git clone https://github.com/xxxxxx.git</code>. Obviously there is a lot more under the Git hood than that, but that will get you started&#8230;</li>
+<li>Cygwin is something that probably every Windows developer has on their computer, but if you don&#8217;t, then there are 3 things we need from it: <code>gcc</code>, <code>g++</code>, and <code>sh</code>. We need those functions on the path for the Android development environment in Eclipse to be able to build C++ components of our apps. Again, this is something you might not need if you don&#8217;t plan on having any native app components, but it is probably something you should have &#8220;just in case&#8221;. We are getting you setup so that you can handle 99% of use cases&#8230; </li>
+<li>7-zip is just a file unzipper. So why do you need it? Well the answer is linked to the next step&#8230; the Eclipse download. The builtin file unzipper in Windows 7 does not properly unzip the the Eclipse files. I don&#8217;t know why this happens, but I can attest to the fact that the built-in Windows 7 unzipper corrupts the Eclipse files (and I am not alone or crazy&#8230; Google it!). I don&#8217;t know if the built-in unzipper causes problems in other versions of Windows, but better safe than sorry&#8230; 7-zip is great anyway. So it doesn&#8217;t hurt to get it.</li>
+<li>If we are talking about Eclipse development, then obviously you are going to need Eclipse. But make sure you install the JDK before installing Eclipse. Eclipse uses the JDK extensively (not just for building Android apps), so you can potentially hit a lot of weird problems if you try installing Eclipse before the JDK. Just do yourself a favor and install the JDK first. On top of that, you will note in the video above that I do not recommend using the installer. The reason for that is that the installer will try to use the built-in unzipper&#8230; and like I said, that seems to corrupt the Eclipse files on some operating systems (Windows 7..cough..cough).</li>
+<li>As mentioned in passing before&#8230; Android is based on Java. Most apps will be developed only with Java code. However, you can build C++ components into your app, and to do that, you need the NDK (Native Development Kit). You shouldn&#8217;t start app development with the NDK, but you might end up there. So you might want to just go ahead and get that now.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Installation</h3>
+<ol>
+<li>The Oracle website is a bit strange, but I trust that you can find the download for the latest JDK for your platform. By the way, you do not need the &#8220;Demos and Samples Download&#8221;. The barebones implementation will do. In my case, I looked for &#8220;Windows x64&#8221;, and then downloaded <code>jdk-8u121-windows-x64.exe</code>. Before downloading, you have to remember to click the &#8220;Accept License Agreement&#8221; button, which is a bit hidden. Then just click through the installer. Nothing special.</li>
+<li>Git is pretty straight-forward. Just get the installer for your system, and keep clicking until it finishes. No special settings needed.</li>
+<li>Cygwin is a bit cumbersome for beginners. Run the installer. At one point you have to select a download site. Choose something near you since presumably the connection will be faster. For instance, I live in Germany, so I found a download site that ended with .de. Also, I have always had more luck with the http connections than the ftp connections. Just saying&#8230; We will need <code>gcc</code>, <code>g++</code>, and <code>sh</code>, so in the search field, search for <code>gcc</code>. At the bare minimum, you will need <code>gcc-g++</code> and <code>gcc-core</code> from the <code>Devel</code> list, so select those. You will also need <code>sh</code>, but that will be installed as a dependency, so you don&#8217;t have to do anything. Just click through the rest of the installation.</li>
+<li>7-zip is straight-forward. Just click, click, click. Nothing special.</li>
+<li>Eclipse is a little bit weird. We downloaded a zip file without the installer. To extract the contents, right-click the downloaded file and open it with the 7-zip file manager (7zFM.exe). Then extract it in a place where you would like your installation. Moving the installation can cause you all sorts of heartbreak, so put it somewhere where it is easy to get to, and where you don&#8217;t plan on moving. I think &#8220;C:\&#8221; and &#8220;C:\yourUserName\&#8221; are good locations. Just please don&#8217;t pick a path with spaces in it, like &#8220;C:\Program Files\&#8221;. Doing so will cause you heartbreak at least once in your life. Also, don&#8217;t run Eclipse yet. We will get to that in the next section.</li>
+<li>If you downloaded the NDK, then I would unpack it inside your Eclipse folder, since you won&#8217;t be using one without the other.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>The first run</h3>
+<p>First of all, when you unpack Eclipse from the zip file, it is not installed via a traditional installer. Therefore it will not appear on your start menu or desktop. In lieu of that, I like to create a shortcut to the executable on my desktop.</p>
+<p>The first time Eclipse is run, it will ask you to specify a workspace. This is the container for projects that Eclipse loads into memory. You will typically never change the workspace, so create an easy to find location where to save it. I think saving it in a newly created workspace folder in the eclipse folder is a good idea. In this workspace, every new project will get its own folder. </p>
+<p>After specifying the workspace, Eclipse may ask you for the location of the SDK. It asks you for the location just in case you already downloaded it. But we did not, so click &#8220;close&#8221;. Eclipse will download it for us in just second&#8230; </p>
+<p><em>An aside on terminology: JDK=Java Devleopment Kit, SDK=Software Development Kit, and NDK=Native Development Kit. The JDK is used to develop any Java program (Android or not). The SDK is a Java based library of routines specific to Android (for instance, to get access to the sensors and cameras). The NDK is a library used to compile C++ code into an Android project. A final piece of terminology you may come across is the JNI (Java Native Interface), which is used to compile C++ code into a generic Java project. The NDK is built on top of the JNI. </em></p>
+<p>Once you tell Eclipse that you haven&#8217;t downloaded the SDK, it will offer to do it for you. Again, you should tell Eclipse to download these files to the Eclipse folder so that everything is packaged together. You do not need Android 2.2. You only need &#8220;The latest available version of Android APIs&#8230;&#8221; We will get more APIs in a second. </p>
+<p>At some point during the installation, Eclipse may ask if you want to install an Android virtual device. This is an emulator. Personally, I like to do test my programs on an actual device (a physical phone that you can hold in your hands). However, you can also simulate a phone on your computer, and test your programs on that. The reason I do not like using the emulator is speed. It can literally take 10 times longer to deploy an app for testing on an emulator than on a physical phone. So in summary&#8230; if you are planning on testing on a phone, you do not need to set up a virtual device. Even if you want to use an emulator, you can set that up later, so I would click &#8220;no&#8221; here. </p>
+<p>Next, it may ask you to install the SDK built tools. You need those, so open the SDK Manager. If you accidentally clicked close, you can find the SDK Manager in Eclipse under Window -> Android SDK Manager. There are a lot of options in the SDK Manager, but you only need a few things:</p>
+<ol>
+<li>Android SDK Tools</li>
+<li>Android SDK Platform-tools</li>
+<li>The latest Android SDK Build-tools</li>
+<li>An SDK Platform</li>
+</ol>
+<p>&nbsp;</p>
+<h3>The Android SDK Manager</h3>
+<p>For each Android API, you are given the option to down some mix of the following options: SDK Platform, Samples for SDK, Google APIs, System Images, Sources for Android SDK, Documentation. Here is what those options do: </p>
+<ol>
+<li><code>SDK Platform</code>: This is the bare minimum needed to compile code meant for a specific API. For instance, if I want to compile an app meant for Android 5.1.1 and newer devices, I could compile it with the 5.1.1 SDK Platform. All devices newer than the chosen SDK should be able to run the app because the APIs are backward compatible. That means that if I use some function that Google introduced in Android version 5.1.1, a phone running Android 5.1.1 or newer should be able to run that function. Some functions become deprecated over time, so that this is not technically guaranteed to be true, but I have never once seen an issue with it. Some functions have been deprecated for years, but still remain in the API. The last thing I should mention is that, due to this backward compatibility, you might consider only getting the newest SDK Platform. However, when you write code with that platform, it is easy to forget that some functions will not be available on older devices.</li>
+<li><code>Samples for SDK</code>: When a new function or functionality is introduced to Android, a minimum working example app is typically released along with it to demonstrate its proper usage. Looking at and running these sample apps is often a good way to see how you should be using the code. In fact, many people use these apps as baselines for new apps, basically just tweaking the apps to fit their needs instead of writing a new app from the ground up.</li>
+<li><code>Google APIs</code>: Google has a lot of well know APIs (like the Maps API) that are not built into the basic SDK Platform. The reason might partially be size (so that only core functionality is in the SDK Platform), but it probably also has to do with licensing. I believe the phone manufacturers have to pay Google to incorporate the Google APIs on their phones (which essentially all phone manufacturers do). So the Google APIs (which include the SDK Platform in them), are kind of like downloading a different API level version&#8230; If a phone doesn&#8217;t implement the Google APIs, then you wouldn&#8217;t want to built your app with them because you might include a function that is not implemented by the device manufacturer. So if somebody tried to run your app on such a phone they would probably see a runtime crash.</li>
+<li><code>System Images</code>: These are the objects that the emulator uses to simulate a specific device. For instance, if I want to emulate an Android 5.1.1 device with Google APIs and an ARM 64 processor, I would look for that System Image. Be careful though. These files can be really huge, so you do not want to download many of these. Actually, I do not have any downloaded, because I do not use the emulator. But I leave it up to you&#8230;</li>
+<li><code>Sources for Android SDK</code>: The SDK Platform is a compiled version of the source code. These are the sources used to generate it. I like to download these so that when I am debugging, I can see exactly what the Android code is doing internally. So these are not necessary, but they give you insight into the underlying implementation.</li>
+<li>Documentation: Self explanatory&#8230; no?</li>
+</ol>
+<p>Finally, there are some &#8220;Extras&#8221; at the bottom. Depending on what types of apps you are writing, you may or may not need these. So it is hard for me to give you advice on whether to download them. I like having them there just in case. </p>
+<p>&nbsp;</p>
+<h3>Finishing the NDK setup</h3>
+<p>Open Eclipse, and navigate to Window->Preferences->Android->NDK. There, you need to specify the location of the unpacked NDK files. In some of the newer NDK versions there seems to be a small bug, where Eclipse says &#8220;Not a valid NDK directory&#8221;, and will not let you &#8220;Apply&#8221; the changes. To solve this problem, you need to create a blank file called &#8220;ndk-build&#8221; without a file extension in the ndk folder. In that folder, you should already have a file &#8220;ndk-build.cmd&#8221;, so now we need to create an additional empty file with the same name, but no extension. As I show in the video above, one easy way to do this is to open the command prompt in the ndk folder, and enter the command &#8220;<code>echo > ndk-build</code>&#8220;. Then open the file with Wordpad or something similar and delete all of the contents. Then you can go back to Eclipse and try to reenter the NDK location. You should find that it is now recognized. </p>
+<p>Next, to actually compile NDK code, we installed Cygwin, but didn&#8217;t tell Eclipse where it lives. Therefore we are going to add Cygwin to the system path so that Eclipse (and anybody else) can always find it. To do that, we need to modify the &#8220;Advanced System Settings&#8221;. To get there, you can either click the start button and search for &#8220;Advanced System Settings&#8221;, or you can right-click on &#8220;My Computer&#8221; and select &#8220;Advanced System Settings&#8221; from the left hand side. In the pane that pops up, click on &#8220;Environmental Variables&#8221; towards the bottom. </p>
+<p>Now for the Pro-tip: One of the most useful things that we can do with environmental variables is add something to the path. For instance, suppose I have some executable &#8220;aa.exe&#8221; in my &#8220;Downloads&#8221; folder. If I want to run the program, I would typically navigate to that folder and double-click the file. Similarly, if I wanted to run it from the command line, I would have to navigate to &#8220;C:\Users\bob\Downloads&#8221; and run it. I could not run the program if my command prompt was at &#8220;C:\Users\bob&#8221; or any other location. This is annoying if there is a file that I want to run a lot, like Cygwin. So to get around this, we will add it to the system path, meaning loosely that we can run Cygwin from any folder. To add a new program to the path, I always employ a three-step process:</p>
+<ol>
+<li>Create a <code>user variable</code> with the variable name <code>PATH_CYGWIN</code> (replacing <code>CYGWIN</code> with whatever program you are adding to the PATH) and variable value pointing to the directory that we want to add to the path. In this case, we want to add the &#8220;<code>bin</code>&#8221; folder in the Cygwin installation to the path. On my system, this is &#8220;<code>C:\cygwin64\bin</code>&#8220;. If you open a new command prompt (cannot be a previously opened one) and type <code>echo %PATH_CYGWIN%</code>, the output should now be the directory we just added. That means that we successfully created the new variable. However, we didn&#8217;t add Cygwin to the path yet (which you can see by trying to run the &#8220;<code>gcc -v</code>&#8221; command in your open prompt). Instead, we just added a new variable pointing to the directory.</li>
+<li>Next, we are going to see if you already have a user variable named &#8220;<code>PATH</code>&#8221; (case is not important, and it could be undercase, or written as &#8220;<code>Path</code>&#8220;). If there is one, copy the value to a new text file. You may want to save this file as a backup. The reason we are doing this is that the PATH variable is instrumental in getting your system to work properly&#8230; and now we are going to modify it. So to protect ourselves in case we make a mistake, we will make a copy so that we can just copy/paste the value from the text file in case we need to revert our changes.</li>
+<li>
+To actually add Cygwin to the system path, we will now add <code>%PATH_CYGWIN%</code> to the value of the user variable &#8220;<code>PATH</code>&#8220;. If there is no user variable (DO NOT modify the <em>system variable</em> PATH), then create a new user variable with the name <code>PATH</code> and value <code>%PATH_CYGWIN%</code>. If there is already a path variable, and it ends with a semicolon, then add &#8220;%PATH_CYGWIN%&#8221;. If it did not end with a semicolon, add &#8220;;%PATH_CYGWIN%&#8221; to the value. Now if you open a new command prompt and type &#8220;<code>gcc -v</code>&#8220;, you should see the version of gcc that is you installed. If something went wrong, you can revert to the original PATH value by copying what we put in the text file.
+</li>
+</ol>
+<blockquote><p>Note: Instead of creating a separate variable PATH_CYGWIN, and adding that variable to the Path, you could instead add Cygwin&#8217;s bin directory directly to the path&#8217;s value. However, as you start adding more and more paths (when you install more and more programs), this gets to be a real mess. It is much cleaner if your Path variable simply says something like <code>%PATH_CYGWIN%;%PATH_PERL%;%PATH_PYTHON%</code> etc. At the very least, it makes it much easier to see what is on your path, and potentially remove it.</p></blockquote>
+<p>&nbsp;</p>
+<h3>The finishing touches</h3>
+<p>Now, if you find an Eclipse-based Android project on Github, we are ready to build the thing. What you want to do is to clone the code into your Eclipse workspace. So open a command prompt in your workspace folder (it should be something like C:\bob\eclipse\workspace), and run your <code>git clone https://github.com/xxxxxx.git</code> command. To get Eclipse to recognize the project, you need to &#8220;import&#8221; it into Eclipse. To do that, go to File->Import->Android->Existing Android code into workspace. Then browse to the root directory, and select the projects you want to import. Generally, I have found no use for working sets, so I never &#8220;add project to working sets&#8221;. However, there is one thing you need to be careful of&#8230; </p>
+<p>If you have the project&#8217;s code already sitting in your workspace folder, but it is not imported into Eclipse, then you should NOT &#8220;Copy projects into workspace&#8221;. The use of the &#8220;Copy projects into workspace&#8221; function is this&#8230; If you do not have the code in your workspace folder, then you could tell Eclipse to &#8220;Copy projects into workspace&#8221;, in which case, Eclipse would simply copy all of the code into your workspace folder. Then whenever you modify the code, build it, etc, your original code would remain untouched. If your code is not in the workspace folder, and you don&#8217;t let Eclipse copy it, then Eclipse will work with it &#8220;in place&#8221;, that is, you will never see that projects contents in your workspace folder. </p>
+<blockquote><p>A note about the workspace: Do not copy this folder and try to move it. If you try to do this and reopen Eclipse, you will have to start reimporting your projects. If you want to see what would happen, try copying (copy/paste NOT cut/paste) your workspace somewhere else. Then you could try to change your workspace by going to File->Switch workspace. Did everything reappear like thought it would? Probably not.</p></blockquote>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links clearfix">
+			<div class="nav-previous"><i class="fa fa-long-arrow-left"></i> <a href="/networked-android-sensor-data/" rel="prev">Networked Android Sensor Data</a></div><div class="nav-next"><a href="/assembling-parameters-setup-quadcopter-dji-naza-f450/" rel="next">Assembling and Parameters Setup for DJI NAZA-F450 Quadcopter</a> <i class="fa fa-long-arrow-right"></i></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+			</div>
+		</div>
+	</div><!-- #content -->
+
+			
+
+	
+	<div id="sidebar-footer" class="footer-widgets widget-area" role="complementary">
+		
+		<div class="container">
+							<div class="sidebar-column col-sm-6 col-xs-12">
+					<aside id="text-4" class="widget widget_text">			<div class="textwidget">This research group is a collaboration between the German Aerospace Center (DLR) and University of Bremen, with funding made possible by the DLR and the Excellence Initiative of the German Research Foundation (DFG).</div>
+		</aside>				</div>
+				
+							<div class="sidebar-column col-sm-2 col-xs-4">
+					<aside id="media_image-5" class="widget widget_media_image"><figure style="width: 100px" class="wp-caption alignnone"><a href="http://www.dlr.de/" target="_blank" rel="noopener noreferrer"><img class="image alignleft" src="/raw/dlrw.svg" alt="" width="100" height="100" /></a><figcaption class="wp-caption-text">German Aerospace Center</figcaption></figure></aside>				</div>
+				
+							<div class="sidebar-column col-sm-2 col-xs-4">
+					<aside id="media_image-6" class="widget widget_media_image"><figure style="width: 100px" class="wp-caption alignnone"><a href="http://www.uni-bremen.de/en.html" target="_blank" rel="noopener noreferrer"><img class="image alignleft" src="/raw/bremenlogow.svg" alt="" width="100" height="100" /></a><figcaption class="wp-caption-text">University of Bremen</figcaption></figure></aside>				</div>
+				
+							<div class="sidebar-column col-sm-2 col-xs-4">
+					<aside id="media_image-8" class="widget widget_media_image"><figure style="width: 100px" class="wp-caption alignnone"><a href="http://www.dfg.de/en/research_funding/programmes/excellence_initiative/index.html" target="_blank" rel="noopener noreferrer"><img class="image alignleft" src="/raw/dfgexcellencew.svg" alt="" width="100" height="100" /></a><figcaption class="wp-caption-text">DFG Excellence Initiative</figcaption></figure></aside>				</div>
+				
+		</div>	
+	</div>	
+
+<!--
+    <a class="go-top"><i class="fa fa-angle-up"></i></a>
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info container">
+			<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: <a href="http://athemes.com/theme/sydney" rel="designer">Sydney</a> by aThemes.		</div>
+	</footer> #colophon -->
+</div><!-- #page -->
+
+<!-- YouTube Channel 3 --><script type="3e25ec62f413088dc6bd3b95-text/javascript">function ytc_init_MPAU() {jQuery('.ytc-lightbox').magnificPopupAU({disableOn:320,type:'iframe',mainClass:'ytc-mfp-lightbox',removalDelay:160,preloader:false,fixedContentPos:false});}jQuery(window).on('load',function(){ytc_init_MPAU();});jQuery(document).ajaxComplete(function(){ytc_init_MPAU();});</script>	<div style="display:none">
+	</div>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20190201'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201933'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='/wp-content/plugins/youtube-channel/assets/lib/magnific-popup/jquery.magnific-popup.min.js?ver=3.0.11.8'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='/wp-content/themes/sydney/js/scripts.js?ver=5.2.2'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='/wp-content/themes/sydney/js/main.min.js?ver=5.2.2'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='/wp-content/themes/sydney/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript" src='https://stats.wp.com/e-201933.js' async='async' defer='defer'></script>
+<script type="3e25ec62f413088dc6bd3b95-text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.6',blog:'119721859',post:'1236',tz:'0',srv:'pcessflight.com'} ]);
+	_stq.push([ 'clickTrackerInit', '119721859', '1236' ]);
+</script>
+
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="3e25ec62f413088dc6bd3b95-|49" defer=""></script></body>
+</html>

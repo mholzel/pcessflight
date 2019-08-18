@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+>
+
+<channel>
+	<title></title>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>Parallel Computing for Embedded Sensor Systems</description>
+	<lastBuildDate>Fri, 05 May 2017 07:12:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.2</generator>
+<site xmlns="com-wordpress:feed-additions:1">119721859</site>	<item>
+		<title>Assembling and Parameters Setup for DJI NAZA-F450 Quadcopter</title>
+		<link>/assembling-parameters-setup-quadcopter-dji-naza-f450/</link>
+				<pubDate>Mon, 13 Mar 2017 14:25:20 +0000</pubDate>
+		<dc:creator><![CDATA[pcess]]></dc:creator>
+				<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">/?p=1285</guid>
+				<description><![CDATA[Assembling and Parameters Setup for DJI NAZA-F450 with FUTABA T10J Transmitter and R3008SB Receiver. Download Manual]]></description>
+								<content:encoded><![CDATA[<p>Assembling and Parameters Setup for DJI NAZA-F450 with FUTABA T10J Transmitter and R3008SB Receiver. </p>
+<p><a href="/raw/FUTABA_TJ10_Installation.pdf">Download Manual</a></p>
+]]></content:encoded>
+									<post-id xmlns="com-wordpress:feed-additions:1">1285</post-id>	</item>
+		<item>
+		<title>Setting up an Android Development Environment in Windows with Eclipse</title>
+		<link>/setting-android-development-environment-windows-eclipse/</link>
+				<pubDate>Wed, 01 Feb 2017 10:19:00 +0000</pubDate>
+		<dc:creator><![CDATA[pcess]]></dc:creator>
+				<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">/?p=1236</guid>
+				<description><![CDATA[WARNING: In the above video, the cursor is recorded in a slightly offset position, so sometimes it may look like I am selecting a 32 bit install instead of a 64 bit install. In any case, always select the download that matches your computer. Here we will show you how to setup Eclipse for Android [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p><iframe class='youtube-player' type='text/html' width='1170' height='659' src='https://www.youtube.com/embed/FhwcwKpRDLw?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+<blockquote><p>WARNING: In the above video, the cursor is recorded in a slightly offset position, so sometimes it may look like I am selecting a 32 bit install instead of a 64 bit install. In any case, always select the download that matches your computer.</p></blockquote>
+<p><HR WIDTH="80%"></p>
+<p>Here we will show you how to setup Eclipse for Android development in Windows. We use Eclipse partially for legacy reasons, but also due to the fact that Android Studio builds can be slow, and the fact that Eclipse supports development in Java, C++, and many other languages. I prefer to only have to learn one IDE for all of the programming I work on, and for that reason, I use Eclipse. For example, do you want to go through learning how to use Visual Studio just to learn C++ development, Android studio only for Android projects, and something else for Java development? I don&#8217;t. So here we will walk you through the steps necessary to setup Eclipse for Android development in Windows.</p>
+<p>&nbsp;</p>
+<h3>The Ingredients</h3>
+<p>Here is just a general list of the ingredients&#8230; every piece of software that you need to get your development environment set up. But please, try to install everything in the order I lay out. Otherwise, you may need to do a little bit of troubleshooting:</p>
+<ol>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java JDK</a></li>
+<li><a href="https://git-scm.com/download" target="_blank">Git</a></li>
+<li><a href="https://cygwin.com/install.html" target="_blank">Cygwin (specifically, gcc, g++, and sh)</a></li>
+<li><a href="http://www.7-zip.org/" target="_blank">7-zip</a></li>
+<li><a href="https://www.eclipse.org/downloads/eclipse-packages/" target="_blank">Eclipse for Android Developers</a></li>
+<li><a href="https://developer.android.com/ndk/downloads/index.html" target="_blank">Android NDK (optional, depending on whether your app has C++ components)</a></li>
+</ol>
+<p>&nbsp;</p>
+<h3>Only the finest ingredients&#8230;</h3>
+<p>I will get into the details of how to actually do the setup in the next section. Here I just want to introduce you to what you will be cooking with and why&#8230;</p>
+<ol>
+<li>To build a Java app, you need the Java development kit (JDK)&#8230; and since Android is basically built on Java (I am taking a little artistic liberty for saying this), you need the JDK to build Android apps. Note that many people already have Java on their computers to run website plugins. However, to run these plugins, you only need the Java Runtime (JRE) environment. To compile a Java app, you need the full JDK, which includes the JRE in it. So if you know you have Java installed, but don&#8217;t know if you have the JDK, the answer is almost definitely that you do not. The easiest way to check is to go to the folder &#8220;C:\Program Files\Java&#8221; and see if there is a subfolder starting with <em>jdk</em>. If there isn&#8217;t (if you only have folders starting with <em>jre</em>), then you will need to go get the JDK from the link above.</li>
+<li>Git is not technically a requirement for building Android projects in Windows, but it is extremely helpful. You will often find sample apps that you want to download from Github or a privately-hosted Gitlab server, and the easiest way to get that code is to clone it onto your computer. Specifically, on the landing page for most projects, you will typically find the git prominently displayed, or uncovered by clicking a &#8220;Clone or download&#8221; button. It is a web address that looks like <code>https://github.com/xxxxxx.git</code> To download the code to your computer using git, you simply open a command prompt in the folder where you want the code, and then type <code>git clone https://github.com/xxxxxx.git</code>. Obviously there is a lot more under the Git hood than that, but that will get you started&#8230;</li>
+<li>Cygwin is something that probably every Windows developer has on their computer, but if you don&#8217;t, then there are 3 things we need from it: <code>gcc</code>, <code>g++</code>, and <code>sh</code>. We need those functions on the path for the Android development environment in Eclipse to be able to build C++ components of our apps. Again, this is something you might not need if you don&#8217;t plan on having any native app components, but it is probably something you should have &#8220;just in case&#8221;. We are getting you setup so that you can handle 99% of use cases&#8230; </li>
+<li>7-zip is just a file unzipper. So why do you need it? Well the answer is linked to the next step&#8230; the Eclipse download. The builtin file unzipper in Windows 7 does not properly unzip the the Eclipse files. I don&#8217;t know why this happens, but I can attest to the fact that the built-in Windows 7 unzipper corrupts the Eclipse files (and I am not alone or crazy&#8230; Google it!). I don&#8217;t know if the built-in unzipper causes problems in other versions of Windows, but better safe than sorry&#8230; 7-zip is great anyway. So it doesn&#8217;t hurt to get it.</li>
+<li>If we are talking about Eclipse development, then obviously you are going to need Eclipse. But make sure you install the JDK before installing Eclipse. Eclipse uses the JDK extensively (not just for building Android apps), so you can potentially hit a lot of weird problems if you try installing Eclipse before the JDK. Just do yourself a favor and install the JDK first. On top of that, you will note in the video above that I do not recommend using the installer. The reason for that is that the installer will try to use the built-in unzipper&#8230; and like I said, that seems to corrupt the Eclipse files on some operating systems (Windows 7..cough..cough).</li>
+<li>As mentioned in passing before&#8230; Android is based on Java. Most apps will be developed only with Java code. However, you can build C++ components into your app, and to do that, you need the NDK (Native Development Kit). You shouldn&#8217;t start app development with the NDK, but you might end up there. So you might want to just go ahead and get that now.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>Installation</h3>
+<ol>
+<li>The Oracle website is a bit strange, but I trust that you can find the download for the latest JDK for your platform. By the way, you do not need the &#8220;Demos and Samples Download&#8221;. The barebones implementation will do. In my case, I looked for &#8220;Windows x64&#8221;, and then downloaded <code>jdk-8u121-windows-x64.exe</code>. Before downloading, you have to remember to click the &#8220;Accept License Agreement&#8221; button, which is a bit hidden. Then just click through the installer. Nothing special.</li>
+<li>Git is pretty straight-forward. Just get the installer for your system, and keep clicking until it finishes. No special settings needed.</li>
+<li>Cygwin is a bit cumbersome for beginners. Run the installer. At one point you have to select a download site. Choose something near you since presumably the connection will be faster. For instance, I live in Germany, so I found a download site that ended with .de. Also, I have always had more luck with the http connections than the ftp connections. Just saying&#8230; We will need <code>gcc</code>, <code>g++</code>, and <code>sh</code>, so in the search field, search for <code>gcc</code>. At the bare minimum, you will need <code>gcc-g++</code> and <code>gcc-core</code> from the <code>Devel</code> list, so select those. You will also need <code>sh</code>, but that will be installed as a dependency, so you don&#8217;t have to do anything. Just click through the rest of the installation.</li>
+<li>7-zip is straight-forward. Just click, click, click. Nothing special.</li>
+<li>Eclipse is a little bit weird. We downloaded a zip file without the installer. To extract the contents, right-click the downloaded file and open it with the 7-zip file manager (7zFM.exe). Then extract it in a place where you would like your installation. Moving the installation can cause you all sorts of heartbreak, so put it somewhere where it is easy to get to, and where you don&#8217;t plan on moving. I think &#8220;C:\&#8221; and &#8220;C:\yourUserName\&#8221; are good locations. Just please don&#8217;t pick a path with spaces in it, like &#8220;C:\Program Files\&#8221;. Doing so will cause you heartbreak at least once in your life. Also, don&#8217;t run Eclipse yet. We will get to that in the next section.</li>
+<li>If you downloaded the NDK, then I would unpack it inside your Eclipse folder, since you won&#8217;t be using one without the other.</li>
+</ol>
+<p>&nbsp;</p>
+<h3>The first run</h3>
+<p>First of all, when you unpack Eclipse from the zip file, it is not installed via a traditional installer. Therefore it will not appear on your start menu or desktop. In lieu of that, I like to create a shortcut to the executable on my desktop.</p>
+<p>The first time Eclipse is run, it will ask you to specify a workspace. This is the container for projects that Eclipse loads into memory. You will typically never change the workspace, so create an easy to find location where to save it. I think saving it in a newly created workspace folder in the eclipse folder is a good idea. In this workspace, every new project will get its own folder. </p>
+<p>After specifying the workspace, Eclipse may ask you for the location of the SDK. It asks you for the location just in case you already downloaded it. But we did not, so click &#8220;close&#8221;. Eclipse will download it for us in just second&#8230; </p>
+<p><em>An aside on terminology: JDK=Java Devleopment Kit, SDK=Software Development Kit, and NDK=Native Development Kit. The JDK is used to develop any Java program (Android or not). The SDK is a Java based library of routines specific to Android (for instance, to get access to the sensors and cameras). The NDK is a library used to compile C++ code into an Android project. A final piece of terminology you may come across is the JNI (Java Native Interface), which is used to compile C++ code into a generic Java project. The NDK is built on top of the JNI. </em></p>
+<p>Once you tell Eclipse that you haven&#8217;t downloaded the SDK, it will offer to do it for you. Again, you should tell Eclipse to download these files to the Eclipse folder so that everything is packaged together. You do not need Android 2.2. You only need &#8220;The latest available version of Android APIs&#8230;&#8221; We will get more APIs in a second. </p>
+<p>At some point during the installation, Eclipse may ask if you want to install an Android virtual device. This is an emulator. Personally, I like to do test my programs on an actual device (a physical phone that you can hold in your hands). However, you can also simulate a phone on your computer, and test your programs on that. The reason I do not like using the emulator is speed. It can literally take 10 times longer to deploy an app for testing on an emulator than on a physical phone. So in summary&#8230; if you are planning on testing on a phone, you do not need to set up a virtual device. Even if you want to use an emulator, you can set that up later, so I would click &#8220;no&#8221; here. </p>
+<p>Next, it may ask you to install the SDK built tools. You need those, so open the SDK Manager. If you accidentally clicked close, you can find the SDK Manager in Eclipse under Window -> Android SDK Manager. There are a lot of options in the SDK Manager, but you only need a few things:</p>
+<ol>
+<li>Android SDK Tools</li>
+<li>Android SDK Platform-tools</li>
+<li>The latest Android SDK Build-tools</li>
+<li>An SDK Platform</li>
+</ol>
+<p>&nbsp;</p>
+<h3>The Android SDK Manager</h3>
+<p>For each Android API, you are given the option to down some mix of the following options: SDK Platform, Samples for SDK, Google APIs, System Images, Sources for Android SDK, Documentation. Here is what those options do: </p>
+<ol>
+<li><code>SDK Platform</code>: This is the bare minimum needed to compile code meant for a specific API. For instance, if I want to compile an app meant for Android 5.1.1 and newer devices, I could compile it with the 5.1.1 SDK Platform. All devices newer than the chosen SDK should be able to run the app because the APIs are backward compatible. That means that if I use some function that Google introduced in Android version 5.1.1, a phone running Android 5.1.1 or newer should be able to run that function. Some functions become deprecated over time, so that this is not technically guaranteed to be true, but I have never once seen an issue with it. Some functions have been deprecated for years, but still remain in the API. The last thing I should mention is that, due to this backward compatibility, you might consider only getting the newest SDK Platform. However, when you write code with that platform, it is easy to forget that some functions will not be available on older devices.</li>
+<li><code>Samples for SDK</code>: When a new function or functionality is introduced to Android, a minimum working example app is typically released along with it to demonstrate its proper usage. Looking at and running these sample apps is often a good way to see how you should be using the code. In fact, many people use these apps as baselines for new apps, basically just tweaking the apps to fit their needs instead of writing a new app from the ground up.</li>
+<li><code>Google APIs</code>: Google has a lot of well know APIs (like the Maps API) that are not built into the basic SDK Platform. The reason might partially be size (so that only core functionality is in the SDK Platform), but it probably also has to do with licensing. I believe the phone manufacturers have to pay Google to incorporate the Google APIs on their phones (which essentially all phone manufacturers do). So the Google APIs (which include the SDK Platform in them), are kind of like downloading a different API level version&#8230; If a phone doesn&#8217;t implement the Google APIs, then you wouldn&#8217;t want to built your app with them because you might include a function that is not implemented by the device manufacturer. So if somebody tried to run your app on such a phone they would probably see a runtime crash.</li>
+<li><code>System Images</code>: These are the objects that the emulator uses to simulate a specific device. For instance, if I want to emulate an Android 5.1.1 device with Google APIs and an ARM 64 processor, I would look for that System Image. Be careful though. These files can be really huge, so you do not want to download many of these. Actually, I do not have any downloaded, because I do not use the emulator. But I leave it up to you&#8230;</li>
+<li><code>Sources for Android SDK</code>: The SDK Platform is a compiled version of the source code. These are the sources used to generate it. I like to download these so that when I am debugging, I can see exactly what the Android code is doing internally. So these are not necessary, but they give you insight into the underlying implementation.</li>
+<li>Documentation: Self explanatory&#8230; no?</li>
+</ol>
+<p>Finally, there are some &#8220;Extras&#8221; at the bottom. Depending on what types of apps you are writing, you may or may not need these. So it is hard for me to give you advice on whether to download them. I like having them there just in case. </p>
+<p>&nbsp;</p>
+<h3>Finishing the NDK setup</h3>
+<p>Open Eclipse, and navigate to Window->Preferences->Android->NDK. There, you need to specify the location of the unpacked NDK files. In some of the newer NDK versions there seems to be a small bug, where Eclipse says &#8220;Not a valid NDK directory&#8221;, and will not let you &#8220;Apply&#8221; the changes. To solve this problem, you need to create a blank file called &#8220;ndk-build&#8221; without a file extension in the ndk folder. In that folder, you should already have a file &#8220;ndk-build.cmd&#8221;, so now we need to create an additional empty file with the same name, but no extension. As I show in the video above, one easy way to do this is to open the command prompt in the ndk folder, and enter the command &#8220;<code>echo > ndk-build</code>&#8220;. Then open the file with Wordpad or something similar and delete all of the contents. Then you can go back to Eclipse and try to reenter the NDK location. You should find that it is now recognized. </p>
+<p>Next, to actually compile NDK code, we installed Cygwin, but didn&#8217;t tell Eclipse where it lives. Therefore we are going to add Cygwin to the system path so that Eclipse (and anybody else) can always find it. To do that, we need to modify the &#8220;Advanced System Settings&#8221;. To get there, you can either click the start button and search for &#8220;Advanced System Settings&#8221;, or you can right-click on &#8220;My Computer&#8221; and select &#8220;Advanced System Settings&#8221; from the left hand side. In the pane that pops up, click on &#8220;Environmental Variables&#8221; towards the bottom. </p>
+<p>Now for the Pro-tip: One of the most useful things that we can do with environmental variables is add something to the path. For instance, suppose I have some executable &#8220;aa.exe&#8221; in my &#8220;Downloads&#8221; folder. If I want to run the program, I would typically navigate to that folder and double-click the file. Similarly, if I wanted to run it from the command line, I would have to navigate to &#8220;C:\Users\bob\Downloads&#8221; and run it. I could not run the program if my command prompt was at &#8220;C:\Users\bob&#8221; or any other location. This is annoying if there is a file that I want to run a lot, like Cygwin. So to get around this, we will add it to the system path, meaning loosely that we can run Cygwin from any folder. To add a new program to the path, I always employ a three-step process:</p>
+<ol>
+<li>Create a <code>user variable</code> with the variable name <code>PATH_CYGWIN</code> (replacing <code>CYGWIN</code> with whatever program you are adding to the PATH) and variable value pointing to the directory that we want to add to the path. In this case, we want to add the &#8220;<code>bin</code>&#8221; folder in the Cygwin installation to the path. On my system, this is &#8220;<code>C:\cygwin64\bin</code>&#8220;. If you open a new command prompt (cannot be a previously opened one) and type <code>echo %PATH_CYGWIN%</code>, the output should now be the directory we just added. That means that we successfully created the new variable. However, we didn&#8217;t add Cygwin to the path yet (which you can see by trying to run the &#8220;<code>gcc -v</code>&#8221; command in your open prompt). Instead, we just added a new variable pointing to the directory.</li>
+<li>Next, we are going to see if you already have a user variable named &#8220;<code>PATH</code>&#8221; (case is not important, and it could be undercase, or written as &#8220;<code>Path</code>&#8220;). If there is one, copy the value to a new text file. You may want to save this file as a backup. The reason we are doing this is that the PATH variable is instrumental in getting your system to work properly&#8230; and now we are going to modify it. So to protect ourselves in case we make a mistake, we will make a copy so that we can just copy/paste the value from the text file in case we need to revert our changes.</li>
+<li>
+To actually add Cygwin to the system path, we will now add <code>%PATH_CYGWIN%</code> to the value of the user variable &#8220;<code>PATH</code>&#8220;. If there is no user variable (DO NOT modify the <em>system variable</em> PATH), then create a new user variable with the name <code>PATH</code> and value <code>%PATH_CYGWIN%</code>. If there is already a path variable, and it ends with a semicolon, then add &#8220;%PATH_CYGWIN%&#8221;. If it did not end with a semicolon, add &#8220;;%PATH_CYGWIN%&#8221; to the value. Now if you open a new command prompt and type &#8220;<code>gcc -v</code>&#8220;, you should see the version of gcc that is you installed. If something went wrong, you can revert to the original PATH value by copying what we put in the text file.
+</li>
+</ol>
+<blockquote><p>Note: Instead of creating a separate variable PATH_CYGWIN, and adding that variable to the Path, you could instead add Cygwin&#8217;s bin directory directly to the path&#8217;s value. However, as you start adding more and more paths (when you install more and more programs), this gets to be a real mess. It is much cleaner if your Path variable simply says something like <code>%PATH_CYGWIN%;%PATH_PERL%;%PATH_PYTHON%</code> etc. At the very least, it makes it much easier to see what is on your path, and potentially remove it.</p></blockquote>
+<p>&nbsp;</p>
+<h3>The finishing touches</h3>
+<p>Now, if you find an Eclipse-based Android project on Github, we are ready to build the thing. What you want to do is to clone the code into your Eclipse workspace. So open a command prompt in your workspace folder (it should be something like C:\bob\eclipse\workspace), and run your <code>git clone https://github.com/xxxxxx.git</code> command. To get Eclipse to recognize the project, you need to &#8220;import&#8221; it into Eclipse. To do that, go to File->Import->Android->Existing Android code into workspace. Then browse to the root directory, and select the projects you want to import. Generally, I have found no use for working sets, so I never &#8220;add project to working sets&#8221;. However, there is one thing you need to be careful of&#8230; </p>
+<p>If you have the project&#8217;s code already sitting in your workspace folder, but it is not imported into Eclipse, then you should NOT &#8220;Copy projects into workspace&#8221;. The use of the &#8220;Copy projects into workspace&#8221; function is this&#8230; If you do not have the code in your workspace folder, then you could tell Eclipse to &#8220;Copy projects into workspace&#8221;, in which case, Eclipse would simply copy all of the code into your workspace folder. Then whenever you modify the code, build it, etc, your original code would remain untouched. If your code is not in the workspace folder, and you don&#8217;t let Eclipse copy it, then Eclipse will work with it &#8220;in place&#8221;, that is, you will never see that projects contents in your workspace folder. </p>
+<blockquote><p>A note about the workspace: Do not copy this folder and try to move it. If you try to do this and reopen Eclipse, you will have to start reimporting your projects. If you want to see what would happen, try copying (copy/paste NOT cut/paste) your workspace somewhere else. Then you could try to change your workspace by going to File->Switch workspace. Did everything reappear like thought it would? Probably not.</p></blockquote>
+]]></content:encoded>
+									<post-id xmlns="com-wordpress:feed-additions:1">1236</post-id>	</item>
+		<item>
+		<title>Networked Android Sensor Data</title>
+		<link>/networked-android-sensor-data/</link>
+				<pubDate>Mon, 16 Jan 2017 11:09:36 +0000</pubDate>
+		<dc:creator><![CDATA[pcess]]></dc:creator>
+				<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">/?p=1193</guid>
+				<description><![CDATA[Background SensorEvents are the fundamental objects in the Android Sensor API for transmitting sensor data from the IMU to your application, whether they be accelerometer measurements (TYPE_ACCELEROMETER), gyroscope measurements (TYPE_GYROSCOPE), or some other sensor measurements. However, if you plan to use SensorEvents in a networked application, you will find that SensorEvents quickly turn out to [&#8230;]]]></description>
+								<content:encoded><![CDATA[<h3>Background</h3>
+<p><a href="https://developer.android.com/reference/android/hardware/SensorEvent.html" target="_blank">SensorEvents</a> are the fundamental objects in the Android Sensor API for transmitting sensor data from the IMU to your application, whether they be accelerometer measurements (<code>TYPE_ACCELEROMETER</code>), gyroscope measurements (<code>TYPE_GYROSCOPE</code>), or some other sensor measurements. However, if you plan to use SensorEvents in a networked application, you will find that SensorEvents quickly turn out to be a pain to work with. That is because, under the auspices of privacy, Google has tried its best to deter you from using SensorEvents in networked applications.</p>
+<p>&nbsp;</p>
+<p>Understanding <em>why</em> is easy&#8230; <a href="https://developer.android.com/reference/android/hardware/SensorEvent.html" target="_blank">SensorEvents</a> can be used to track your location, your daily habits, and your health (Android 20+ exposes heart rate measurements). In other words, SensorEvents often contain exactly the type of information that you do not want exposed on the network. Nonetheless, there are certainly legitimate uses for sensor data in networked applications, such as multiplayer games that use player orientations to infer whether they are looking at the same object, or baby monitoring apps that use the accelerometer to determine if a baby is wiggling in bed. In these cases, there is a clear benefit to allowing sensor data to be shared in over the network. </p>
+<p>&nbsp;</p>
+<p>So how does the SensorEvent class protect itself from being networked? Essentially, Google has taken a 3-step approach:</p>
+<ol>
+<li>The SensorEvent class does not implement <code>Serializable</code>, meaning we would need to use another method such as JSONs to transmit events.</li>
+<li>The SensorEvent constructor is protected, meaning that even if we could transmit the data across a network, we could never reinstantiate it on the receiver side.</li>
+<li>The SensorEvent class is protected so that we cannot extend it, and then use one of the methods above.</li>
+</ol>
+<p>&nbsp;</p>
+<p>This means that the only way we are going to get sensor data across a network is by transmitting the sensor data piece by piece, or by bottling up the data in a new class (unless you want to go the JNI route, in which case you can circumvent all of the protected keywords).</p>
+<p>&nbsp;</p>
+<h3>Device ID</h3>
+<p>One of the first problems that arises when dealing with sensor data on the network is that you need to identify which device produced which piece of data. There are many identifiers we could chose, but we need one that is static (so forget IP addresses) and that will work on a wide range of devices (tablets might not have a SIM card, so anything SIM-related is out). One identifier that satisfies these requirements is the <a href="https://developer.android.com/reference/android/provider/Settings.Secure.html" target="_blank">Secure.ANDROID_ID</a>, which is initialized the first time an Android device is booted, is unique to each user, cannot be turned on or off, and will only change when a factory reset is performed. Furthermore, to get the ID, we simply need to have a valid <a href="https://developer.android.com/reference/android/content/Context.html" target="_blank">Context</a> (typically the calling Activity) with which we can call </p>
+<p><code>String id = Secure.getString(context.getContentResolver(), Secure.ANDROID_ID);</code></p>
+<p>Actually, so that we don&#8217;t need to keep remembering how to retrieve this ID, we are going to make a class that saves the ID statically after being initialized with a valid Context:</p>
+<pre>
+public class Device {
+
+    /**
+     * The ID of the current device. This value is null until you call
+     * {@link Device#init(Context)} with a valid {@link Context}.
+     */
+    private static String id = null;
+
+    /**
+     * Returns the {@link Device#id} field, which should be non-null after you
+     * call {@link Device#init(Context)}.
+     */
+    public static String ID() {
+        return id;
+    }
+
+    /**
+     * Initializes and returns the ID of the current device by grabbing the
+     * ANDROID_ID from the {@link ContentResolver} of the given {@link Context}.
+     */
+    public static String init(Context context) {
+        if (context != null) {
+            id = Secure.getString(context.getContentResolver(), Secure.ANDROID_ID);
+        }
+        return id;
+    }
+}
+</pre>
+<p>To use this class, you would ideally place the call <code>Device.init(this)</code> toward the top of the <code>onCreate</code> method of the first activity that starts in your app. After that, whenever you need a unique device identifier, you would simply call <code>Device.ID()</code> from anywhere in your app.   </p>
+<p>&nbsp;</p>
+<h3>A Simple SensorEvent class</h3>
+<p>Since we can&#8217;t easily work with SensorEvents on the network, we need a new class to replace it. This new class should be lightweight and contain only the core SensorEvent data because:</p>
+<ol>
+<li>We expect to be sending a lot of sensor data.</li>
+<li>A lot of the data inside a SensorEvent is never used.</li>
+<li>Even if we could save all of the data in a SensorEvent in our new class, we won&#8217;t be able to reinstantiate a SensorEvent on the receiver side anyway. So there really is no use.</li>
+</ol>
+<p>That being said, for about 99.9% of applications, there are really only 4 things we need from a SensorEvent: </p>
+<ol>
+<li>The type of sensor (e.g. TYPE_ACCELEROMETER) that generated the event.</li>
+<li>The event <a href="https://developer.android.com/reference/android/hardware/SensorEvent.html#timestamp" target="_blank">timestamp.</a></li>
+<li>The event <a href="https://developer.android.com/reference/android/hardware/SensorEvent.html#values">values.</a></li>
+<li>The ID of the device that generated the event.</li>
+</ol>
+<p>A <code>SimpleEvent</code> is, as the name implies, a stripped-down version of the SensorEvent class containing only this information. That means that you won&#8217;t be able to reinstantiate a SensorEvent from a SimpleEvent. However, in return, SimpleEvents are Serializable, easily instantiable from SensorEvents, and lightweight enough for high-volume network transmission. So if you are in the market for something to replace SensorEvents in your networked application, you might want to try something like this:</p>
+<pre>
+public class SimpleEvent implements Serializable {
+
+    /**
+     * The auto-generated {@link UUID} associated with this class, used by the
+     * {@link Serializable} interface.
+     */
+    private static final long   serialVersionUID        = -2844988702907222858L;
+
+    /**
+     * ---------------------------------------------
+     *
+     * Public Fields
+     *
+     * ---------------------------------------------
+     */
+    /**
+     * The type of {@link SimpleEvent}. This could be one of Android's built-in
+     * types, such as {@link Sensor#TYPE_ACCELEROMETER}, or a user-defined type.
+     */
+    public int                  type;
+    public static final int     typeDefault             = 0;
+
+    /** See {@link SensorEvent#timestamp}. */
+    public long                 time;
+    public static final long    timeDefault             = 0;
+
+    /** See {@link SensorEvent#values}. */
+    public float[]              data;
+    public static final float[] dataDefault             = null;
+
+    /** The ID of the device that generated this {@link SimpleEvent}. */
+    public String               device                  = null;
+
+    /**
+     * ---------------------------------------------
+     *
+     * Constructors
+     *
+     * ---------------------------------------------
+     */
+    /**
+     * Create an empty {@link SimpleEvent} on the current device, as defined by
+     * {@link Device#ID}.
+     */
+    public SimpleEvent() {
+        this(typeDefault, timeDefault, dataDefault, Device.ID());
+    }
+
+    /**
+     * Create an empty {@link SimpleEvent} with the specified device ID (the
+     * device which generated the event).
+     */
+    public SimpleEvent(String device) {
+        this(typeDefault, timeDefault, dataDefault, device);
+    }
+
+    /**
+     * Create an empty {@link SimpleEvent} of the specified type on the current
+     * device, as defined by {@link Device#ID}.
+     */
+    public SimpleEvent(int type) {
+        this(type, timeDefault, dataDefault, Device.ID());
+    }
+
+    /**
+     * Create an empty {@link SimpleEvent} of the specified type on the
+     * specified device.
+     */
+    public SimpleEvent(int type, String device) {
+        this(type, timeDefault, dataDefault, device);
+    }
+
+    /**
+     * Create a {@link SimpleEvent} from the specified arguments on the current
+     * device, as defined by {@link Device#ID}.
+     */
+    public SimpleEvent(int type, long time, float[] data) {
+        this(type, time, data, Device.ID());
+    }
+
+    /** Create a {@link SimpleEvent} from the specified arguments. */
+    public SimpleEvent(int type, long time, float[] data, String device) {
+        this.type = type;
+        this.time = time;
+        this.data = data;
+        this.device = device;
+    }
+
+    /**
+     * Create a {@link SimpleEvent} from the {@link SensorEvent}, and assume
+     * that this device created the event, where the current device is defined
+     * by {@link Device#ID}. Note that since a {@link SimpleEvent} is a stripped-down 
+     * version of a {@link SensorEvent}, you will not be able to reconstruct the
+     * {@link SensorEvent} from the new {@link SimpleEvent}.
+     */
+    public SimpleEvent(SensorEvent event) {
+        this(event.sensor.getType(), event.timestamp, event.values, Device.ID());
+    }
+
+    /**
+     * ---------------------------------------------
+     *
+     * Setters
+     *
+     * ---------------------------------------------
+     */
+    /**
+     * Copy the fields from the specified {@link SensorEvent}, assuming that the
+     * {@link SensorEvent} occurred on the current device.
+     */
+    public SimpleEvent copyFrom(SensorEvent event) {
+        type = event.sensor.getType();
+        time = event.timestamp;
+        data = event.values;
+        device = Device.ID();
+        return this;
+    }
+
+    /** Reset all of the fields to their default values. */
+    public SimpleEvent reset() {
+        type = typeDefault;
+        time = timeDefault;
+        data = dataDefault;
+        device = Device.ID();
+        return this;
+    }
+
+    /**
+     * ---------------------------------------------
+     *
+     * Getters
+     *
+     * ---------------------------------------------
+     */
+    /** Indicates whether this {@link SimpleEvent} occurred on this device. **/
+    public boolean onThisDevice() {
+        return device == null || device.equals(Device.ID());
+    }
+}
+</pre>
+<p>This class is not the end-all in terms of what you might need for your application, but I would recommend getting used to using something like this SimpleEvent class in your applications. If you have even the slightest inkling that you might be dealing with sensor data from the network in the near future, then doing so will certainly ease the transition when that time comes. </p>
+]]></content:encoded>
+									<post-id xmlns="com-wordpress:feed-additions:1">1193</post-id>	</item>
+		<item>
+		<title>Compressing and decompressing multiple input arguments in Matlab/Octave</title>
+		<link>/compressing-decompressing-multiple-input-arguments-matlaboctave/</link>
+				<pubDate>Mon, 28 Nov 2016 10:50:12 +0000</pubDate>
+		<dc:creator><![CDATA[pcess]]></dc:creator>
+				<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">/?p=989</guid>
+				<description><![CDATA[Many functions in Matlab/Octave (particularly integration and optimization functions), are designed to accept function handles that only take a single vector input, that is, function handles of the form g(x). Hence anytime you want to use a function with multiple input arguments, such as you need to write custom boilerplate code to make it work. [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p>Many functions in Matlab/Octave (particularly integration and optimization functions), are designed to accept function handles that only take a single vector input, that is, function handles of the form <code>g(x)</code>. Hence anytime you want to use a function with multiple input arguments, such as</p>
+<p><script src="http://gist-it.appspot.com/https://github.com/pcess/tutorials/blob/master/OctaveCompressDecompress/f.m?footer=none"></script></p>
+<p>you need to write custom boilerplate code to make it work. This is repetitive, error-prone, and a waste of time. So here I am going to introduce some code and methodology that you can use to minimize the boilerplate code you have to write. </p>
+<p>&nbsp;</p>
+<p>First, let&#8217;s look at a specific example. To minimize the single-input function</p>
+<p><script src="http://gist-it.appspot.com/https://github.com/pcess/tutorials/blob/master/OctaveCompressDecompress/g.m?footer=none"></script></p>
+<p>I would create an initial guess (e.g. <code>x0 = zeros(2,11);</code>), and then call a function like <code>fminunc</code> to do the minimization:</p>
+<pre>
+x = fminunc( @g, x0 )
+</pre>
+<p>However, to use <code>fminunc</code> with functions that have more than one input, such as <code>f(x,y,z)</code>, I would typically have to vectorize the initial guess, and modify <code>f</code> so that it takes a single vector input. For instance, I could modify the function <code>f</code> to something like:</p>
+<p><script src="http://gist-it.appspot.com/https://github.com/pcess/tutorials/blob/master/OctaveCompressDecompress/fmod.m?footer=none"></script></p>
+<p>which I could then call from <code>fminunc</code> using a vectorized initial guess:</p>
+<pre>
+x0   = zeros(2,11);
+y0   = zeros(3,4);
+z0   = zeros(5,7);
+xyz0 = [ x0(:) ; y0(:) ; z0(:) ];
+xyz  = fminunc( @fmod, xyz0 )
+</pre>
+<p>The obvious problem here is that I have now hard-coded my input dimensions, thereby limited the versatility of my code. I could cook up some more advanced ways of getting around this problem, but there is no point. The result will be a mess, and I will spend a lot of time on what should be a trivial problem. Instead, let&#8217;s look at how to use the code I provide&#8230;</p>
+<p>&nbsp;</p>
+<p>First of all, the code I present is called <code>press</code>, and is available in its raw form here: <a href="https://raw.githubusercontent.com/pcess/tutorials/master/OctaveCompressDecompress/press.m" target="_blank">press.m</a>. Using <code>press</code> still requires that the inputs get vectorized, but the boilerplate footprint is trivial. Instead of the nasty function <code>fmod</code> that we created before, your modified function <code>f(x,y,z)</code> will now look quite nice:</p>
+<p><script src="http://gist-it.appspot.com/https://github.com/pcess/tutorials/blob/master/OctaveCompressDecompress/fnew.m?footer=none"></script></p>
+<p>Furthermore, even the vectorization is fairly benign:</p>
+<pre>
+x0   = zeros(2,11);
+y0   = zeros(3,4);
+z0   = zeros(5,7);
+xyz0 = press( 'xyzKey', x0, y0, z0 );
+xyz  = fminunc( @fnew, xyz0 )
+</pre>
+<p>So what is going on here? The basic idea is that the <code>press</code> function is internally saving the dimensions of your input arguments during compression (that is, during the call <code>xyz0 = press( 'xyzKey', x, y, z );</code>), and then using those saved dimensions to handle decompression inside the function (that is, during the call <code>[ x, y, z ] = press( 'xyzKey', xyz );</code>). The string <code>'xyzKey'</code> is simply some unique key that you must choose so that the code knows which set of arguments to compress or decompress. This unique string is necessary because you could be handling multiple compression/decompression events in your code, and so the code needs to know which set of arguments to work with. So, for instance, I could handle something like </p>
+<pre>
+x0   = zeros(2,11);
+y0   = zeros(3,4);
+xy0  = press( 'xy', x0, y0 );
+z0   = zeros(5,7);
+xyz0 = press( 'xyZ', xy0, z0 );
+[ x, y ] = press( 'xy', xy0 );
+</pre>
+<p>To see the full project code and examples, see <a href="https://github.com/pcess/tutorials/tree/master/OctaveCompressDecompress" target="_blank">Github</a>. Although you can find the complete code there, here is the specific code for the <code>press</code> function:</p>
+<p><script src="http://gist-it.appspot.com/https://github.com/pcess/tutorials/blob/master/OctaveCompressDecompress/press.m?footer=minimal"></script></p>
+]]></content:encoded>
+									<post-id xmlns="com-wordpress:feed-additions:1">989</post-id>	</item>
+		<item>
+		<title>A smart Android splash screen for grabbing permissions</title>
+		<link>/smart-android-splash-screen-grabbing-permissions/</link>
+				<pubDate>Mon, 21 Nov 2016 14:19:18 +0000</pubDate>
+		<dc:creator><![CDATA[pcess]]></dc:creator>
+				<category><![CDATA[Tutorials]]></category>
+
+		<guid isPermaLink="false">/?p=878</guid>
+				<description><![CDATA[Before Android 6.0, app permissions were relatively easy to handle&#8230; A user had to grant permissions during installation, or else an app could not be installed. However, starting in Android 6.0, a user can either deny specific app permissions during installation, or revoke them after install. Although this is useful from a user&#8217;s point of [&#8230;]]]></description>
+								<content:encoded><![CDATA[<p><iframe class='youtube-player' type='text/html' width='1170' height='659' src='https://www.youtube.com/embed/mk2t9roTrQE?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></p>
+<p>Before Android 6.0, app permissions were relatively easy to handle&#8230; A user had to grant permissions during installation, or else an app could not be installed.</p>
+<p>However, starting in Android 6.0, a user can either deny specific app permissions during installation, or revoke them after install. Although this is useful from a user&#8217;s point of view, this can also be problematic for apps that require a permission as a critical part of the app&#8217;s functionality. In this case, what the developer needs is a way of telling the user:</p>
+<blockquote><p>This app simply cannot continue until it has the permissions it needs.</p></blockquote>
+<p>One partial solution to this problem is to design a splash screen that has the following functionality:</p>
+<ol>
+<li>If the user is either on a pre-Android 6.0 device OR a post-Android 6.0 device where the necessary permissions have been granted, the splash screen displays itself for a few seconds, then starts the main app Activity.</li>
+<li>If the user is on a post-Android 6.0 device and the necessary permissions have not been granted, the splash screen displays itself until the user grants the required permissions.</li>
+</ol>
+<p>The way we accomplish the final task is to start the splash screen with a dialog asking the user to grant the required permissions. Then:</p>
+<ol>
+<li>If the user grants the permissions, we wait for the splash screen timeout, and start the next activity.</li>
+<li>If the user denies the permissions, the dialog pops back up and the app does not continue past the splash screen. Furthermore, the dialog reappears every time the permissions are denied, unless the user selects the &#8220;<em>Never ask again</em>&#8221; option. In this case, the user will be stuck on the splash screen until they go into the Android settings and give the app the required permissions (see video above).</li>
+</ol>
+<p>Before we get to the implementation, there are two things to note:</p>
+<ol>
+<li>If you don&#8217;t want the user to see a splash screen when the permissions are granted, then you can just set the timeout to 0.</li>
+<li>The splash screen concept will only enforce permissions during app startup. As demonstrated in the video above, if the user revokes permissions after the app has continued past the splash screen, then you must deal with that problem later in your code. The splash screen is simply a good first line of defense.</li>
+</ol>
+<p>Without further ado, here is your splash screen Activity. We will dissect it after the jump:<br />
+<script src="http://gist-it.appspot.com/https://github.com/pcess/tutorials/blob/master/SplashPermissions/src/com/pcessflight/splashpermissions/SplashPermissionsActivity.java?footer=minimal"></script></p>
+<p>Although you could insert this code directly into your project, changing the return value of <code>getNextActivityClass</code> to whatever class you want to start after the splash screen times out, I would highly recommend creating an abstract version of the <code>SplashScreenActivity</code> code so that can use it in multiple projects without having separate copies. Specifically, I would recommend that you change the class declaration to </p>
+<pre>
+abstract public class SplashPermissionsActivity extends Activity
+</pre>
+<p>and replace the entire <code>getNextActivityClass</code> function with the declaration </p>
+<pre>
+abstract public Class getNextActivityClass();
+</pre>
+<p>Then, for each new app, you would simply create a new derived Activity class, such as</p>
+<pre>public class MySplashScreenActivity extends SplashScreenActivity {
+    @Override
+    public Class getNextActivityClass() {
+        return MyMainActivity.class;
+    }
+}
+</pre>
+<p>Note: </p>
+<ul>
+<li>If you are not using the abstract form of <code>SplashScreenActivity</code>, then you wold include <code>SplashScreenActivity</code> in your <code>AppManifest</code>. Otherwise, you would include whichever class extends it, such as <code>MySplashScreenActivity</code>.</li>
+<li>The entire sample app can be found <a href="https://github.com/pcess/tutorials/tree/master/SplashPermissions" target="_blank">on Github.</a></li>
+<li>You can try out the app in the <a href="https://play.google.com/store/apps/details?id=com.pcessflight.splashpermissions" target="_blank">play store here.</a></li>
+</ul>
+]]></content:encoded>
+									<post-id xmlns="com-wordpress:feed-additions:1">878</post-id>	</item>
+	</channel>
+</rss>

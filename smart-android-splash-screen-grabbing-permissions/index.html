@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="/xmlrpc.php">
+	
+<title>A smart Android splash screen for grabbing permissions</title>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="/feed/" />
+		<script type="4bf30197e06ec44d65413ba0-text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='sydney-bootstrap-css'  href='/wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='/wp-includes/css/dist/block-library/style.min.css?ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-au-css'  href='/wp-content/plugins/youtube-channel/assets/lib/magnific-popup/magnific-popup.min.css?ver=3.0.11.8' type='text/css' media='all' />
+<link rel='stylesheet' id='youtube-channel-css'  href='/wp-content/plugins/youtube-channel/assets/css/youtube-channel.css?ver=3.0.11.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sydney-heading-and-body-fonts-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C400italic%2C600%7CRaleway%3A400%2C500%2C600&#038;ver=5.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='sydney-style-css'  href='/wp-content/themes/sydney/style.css?ver=5.2.2' type='text/css' media='all' />
+<style id='sydney-style-inline-css' type='text/css'>
+.site-title { font-size:24px; }
+.site-description { font-size:24px; }
+#mainnav ul li a { font-size:14px; }
+h1 { font-size:52px; }
+h2 { font-size:42px; }
+h3 { font-size:32px; }
+h4 { font-size:25px; }
+h5 { font-size:20px; }
+h6 { font-size:18px; }
+body { font-size:14px; }
+.header-image { background-size:cover;}
+.header-image { height:300px; }
+.header-wrap .col-md-6, .header-wrap .col-md-12, .header-wrap .col-md-4, .header-wrap .col-md-8 { width: 100%; text-align: center;}
+#mainnav { float: none;}
+#mainnav li { float: none; display: inline-block;}
+#mainnav ul ul li { display: block; text-align: left; float:left;}
+.site-logo, .header-wrap .col-md-4 { margin-bottom: 15px; }
+.btn-menu { margin: 0 auto; float: none; }
+.header-wrap .container > .row { display: block; }
+.widget-area .widget_fp_social a,#mainnav ul li a:hover, .sydney_contact_info_widget span, .roll-team .team-content .name,.roll-team .team-item .team-pop .team-social li:hover a,.roll-infomation li.address:before,.roll-infomation li.phone:before,.roll-infomation li.email:before,.roll-testimonials .name,.roll-button.border,.roll-button:hover,.roll-icon-list .icon i,.roll-icon-list .content h3 a:hover,.roll-icon-box.white .content h3 a,.roll-icon-box .icon i,.roll-icon-box .content h3 a:hover,.switcher-container .switcher-icon a:focus,.go-top:hover,.hentry .meta-post a:hover,#mainnav > ul > li > a.active, #mainnav > ul > li > a:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .text-color, .social-menu-widget a, .social-menu-widget a:hover, .archive .team-social li a, a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color:#1e73be}
+.project-filter li a.active, .project-filter li a:hover,.preloader .pre-bounce1, .preloader .pre-bounce2,.roll-team .team-item .team-pop,.roll-progress .progress-animate,.roll-socials li a:hover,.roll-project .project-item .project-pop,.roll-project .project-filter li.active,.roll-project .project-filter li:hover,.roll-button.light:hover,.roll-button.border:hover,.roll-button,.roll-icon-box.white .icon,.owl-theme .owl-controls .owl-page.active span,.owl-theme .owl-controls.clickable .owl-page:hover span,.go-top,.bottom .socials li:hover a,.sidebar .widget:before,.blog-pagination ul li.active,.blog-pagination ul li:hover a,.content-area .hentry:after,.text-slider .maintitle:after,.error-wrap #search-submit:hover,#mainnav .sub-menu li:hover > a,#mainnav ul li ul:after, button, input[type="button"], input[type="reset"], input[type="submit"], .panel-grid-cell .widget-title:after { background-color:#1e73be}
+.roll-socials li a:hover,.roll-socials li a,.roll-button.light:hover,.roll-button.border,.roll-button,.roll-icon-list .icon,.roll-icon-box .icon,.owl-theme .owl-controls .owl-page span,.comment .comment-detail,.widget-tags .tag-list a:hover,.blog-pagination ul li,.hentry blockquote,.error-wrap #search-submit:hover,textarea:focus,input[type="text"]:focus,input[type="password"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="time"]:focus,input[type="week"]:focus,input[type="number"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="color"]:focus, button, input[type="button"], input[type="reset"], input[type="submit"], .archive .team-social li a { border-color:#1e73be}
+.site-header.float-header { background-color:rgba(0,0,0,0.9);}
+@media only screen and (max-width: 1024px) { .site-header { background-color:#000000;}}
+.site-title a, .site-title a:hover { color:#ffffff}
+.site-description { color:#ffffff}
+#mainnav ul li a, #mainnav ul li::before { color:#1e73be}
+#mainnav .sub-menu li a { color:#ffffff}
+#mainnav .sub-menu li a { background:#ffffff}
+.text-slider .maintitle, .text-slider .subtitle { color:#0066bf}
+body { color:#767676}
+#secondary { background-color:#ffffff}
+#secondary, #secondary a, #secondary .widget-title { color:#767676}
+.footer-widgets { background-color:#252525}
+.site-footer { background-color:#1c1c1c}
+.site-footer,.site-footer a { color:#666666}
+.overlay { background-color:#000000}
+.page-wrap { padding-top:0px;}
+.page-wrap { padding-bottom:0px;}
+
+</style>
+<link rel='stylesheet' id='sydney-font-awesome-css'  href='/wp-content/themes/sydney/fonts/font-awesome.min.css?ver=5.2.2' type='text/css' media='all' />
+<!--[if lte IE 9]>
+<link rel='stylesheet' id='sydney-ie9-css'  href='/wp-content/themes/sydney/css/ie9.css?ver=5.2.2' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='jetpack_css-css'  href='/wp-content/plugins/jetpack/css/jetpack.css?ver=7.6' type='text/css' media='all' />
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='next' title='Compressing and decompressing multiple input arguments in Matlab/Octave' href='/compressing-decompressing-multiple-input-arguments-matlaboctave/' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="/smart-android-splash-screen-grabbing-permissions/" />
+<link rel='shortlink' href='https://wp.me/p86l7J-ea' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsmart-android-splash-screen-grabbing-permissions%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsmart-android-splash-screen-grabbing-permissions%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="A smart Android splash screen for grabbing permissions" />
+<meta property="og:url" content="/smart-android-splash-screen-grabbing-permissions/" />
+<meta property="og:description" content="Before Android 6.0, app permissions were relatively easy to handle&#8230; A user had to grant permissions during installation, or else an app could not be installed. However, starting in Android 6.…" />
+<meta property="article:published_time" content="2016-11-21T14:19:18+00:00" />
+<meta property="article:modified_time" content="2017-05-05T07:12:28+00:00" />
+<meta property="og:image" content="http://img.youtube.com/vi/mk2t9roTrQE/0.jpg" />
+<meta property="og:image:secure_url" content="https://img.youtube.com/vi/mk2t9roTrQE/0.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="A smart Android splash screen for grabbing permissions" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+
+<!-- BEGIN ExactMetrics v5.3.8 Universal Analytics - https://exactmetrics.com/ -->
+<script type="4bf30197e06ec44d65413ba0-text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-81910420-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- END ExactMetrics Universal Analytics -->
+			<link rel="stylesheet" type="text/css" id="wp-custom-css" href="/?custom-css=765b5cb8c2" />
+		</head>
+
+<body class="post-template-default single single-post postid-878 single-format-standard">
+<div class="preloader">
+    <div class="spinner">
+        <div class="pre-bounce1"></div>
+        <div class="pre-bounce2"></div>
+    </div>
+</div>	
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-wrap">
+            <div class="container">
+                <div class="row">
+				<div class="col-md-12 col-xs-12">
+		        					<h1 class="site-title"><a href="/" rel="home"></a></h1>
+					<h2 class="site-description"><a href="/" rel="home">Parallel Computing for Embedded Sensor Systems</a></h2>	        
+		        				</div>
+				<div class="col-md-12 col-xs-12">
+					<div class="btn-menu"></div>
+					<nav id="mainnav" class="mainnav" role="navigation">
+						<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="/videos/">Videos</a></li>
+<li id="menu-item-1038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1038"><a href="/tutorials/">Tutorials</a></li>
+<li id="menu-item-82" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82"><a href="/publications/">Publications</a></li>
+<li id="menu-item-85" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85"><a href="/people/">People</a></li>
+<li id="menu-item-326" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-326"><a href="/about/">About</a></li>
+</ul></div>					</nav><!-- #site-navigation -->
+				</div>
+				</div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+	
+	<div class="header-image">
+		<div class="overlay"></div>		<img class="header-inner" src="" width="1920" alt="">
+	</div>
+
+	<div id="content" class="page-wrap">
+		<div class="container content-wrapper">
+			<div class="row">	
+	
+    <!-- Modified from col-md-9 because we do not want a sidebar -->
+	<div id="primary" class="content-area col-xs-12">
+		<main id="main" class="post-wrap" role="main">
+
+		
+			
+<article id="post-878" class="post-878 post type-post status-publish format-standard hentry category-tutorials">
+
+	
+	<header class="entry-header">
+		<h1 class="title-post">A smart Android splash screen for grabbing permissions</h1>
+				<div class="meta-post">
+			<span class="posted-on">Posted on <a href="/smart-android-splash-screen-grabbing-permissions/" rel="bookmark"><time class="entry-date published" datetime="2016-11-21T14:19:18+00:00">November 21, 2016</time><time class="updated" datetime="2017-05-05T07:12:28+00:00">May 5, 2017</time></a></span><span class="byline"> <span class="author vcard"><a class="url fn n" href="/author/pcess/">pcess</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='1170' height='659' src='https://www.youtube.com/embed/mk2t9roTrQE?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></p>
+<p>Before Android 6.0, app permissions were relatively easy to handle&#8230; A user had to grant permissions during installation, or else an app could not be installed.</p>
+<p>However, starting in Android 6.0, a user can either deny specific app permissions during installation, or revoke them after install. Although this is useful from a user&#8217;s point of view, this can also be problematic for apps that require a permission as a critical part of the app&#8217;s functionality. In this case, what the developer needs is a way of telling the user:</p>
+<blockquote><p>This app simply cannot continue until it has the permissions it needs.</p></blockquote>
+<p>One partial solution to this problem is to design a splash screen that has the following functionality:</p>
+<ol>
+<li>If the user is either on a pre-Android 6.0 device OR a post-Android 6.0 device where the necessary permissions have been granted, the splash screen displays itself for a few seconds, then starts the main app Activity.</li>
+<li>If the user is on a post-Android 6.0 device and the necessary permissions have not been granted, the splash screen displays itself until the user grants the required permissions.</li>
+</ol>
+<p>The way we accomplish the final task is to start the splash screen with a dialog asking the user to grant the required permissions. Then:</p>
+<ol>
+<li>If the user grants the permissions, we wait for the splash screen timeout, and start the next activity.</li>
+<li>If the user denies the permissions, the dialog pops back up and the app does not continue past the splash screen. Furthermore, the dialog reappears every time the permissions are denied, unless the user selects the &#8220;<em>Never ask again</em>&#8221; option. In this case, the user will be stuck on the splash screen until they go into the Android settings and give the app the required permissions (see video above).</li>
+</ol>
+<p>Before we get to the implementation, there are two things to note:</p>
+<ol>
+<li>If you don&#8217;t want the user to see a splash screen when the permissions are granted, then you can just set the timeout to 0.</li>
+<li>The splash screen concept will only enforce permissions during app startup. As demonstrated in the video above, if the user revokes permissions after the app has continued past the splash screen, then you must deal with that problem later in your code. The splash screen is simply a good first line of defense.</li>
+</ol>
+<p>Without further ado, here is your splash screen Activity. We will dissect it after the jump:<br />
+<script src="http://gist-it.appspot.com/https://github.com/pcess/tutorials/blob/master/SplashPermissions/src/com/pcessflight/splashpermissions/SplashPermissionsActivity.java?footer=minimal" type="4bf30197e06ec44d65413ba0-text/javascript"></script></p>
+<p>Although you could insert this code directly into your project, changing the return value of <code>getNextActivityClass</code> to whatever class you want to start after the splash screen times out, I would highly recommend creating an abstract version of the <code>SplashScreenActivity</code> code so that can use it in multiple projects without having separate copies. Specifically, I would recommend that you change the class declaration to </p>
+<pre>abstract public class SplashPermissionsActivity extends Activity
+</pre>
+<p>and replace the entire <code>getNextActivityClass</code> function with the declaration </p>
+<pre>abstract public Class getNextActivityClass();
+</pre>
+<p>Then, for each new app, you would simply create a new derived Activity class, such as</p>
+<pre>public class MySplashScreenActivity extends SplashScreenActivity {
+    @Override
+    public Class getNextActivityClass() {
+        return MyMainActivity.class;
+    }
+}
+</pre>
+<p>Note: </p>
+<ul>
+<li>If you are not using the abstract form of <code>SplashScreenActivity</code>, then you wold include <code>SplashScreenActivity</code> in your <code>AppManifest</code>. Otherwise, you would include whichever class extends it, such as <code>MySplashScreenActivity</code>.</li>
+<li>The entire sample app can be found <a href="https://github.com/pcess/tutorials/tree/master/SplashPermissions" target="_blank">on Github.</a></li>
+<li>You can try out the app in the <a href="https://play.google.com/store/apps/details?id=com.pcessflight.splashpermissions" target="_blank">play store here.</a></li>
+</ul>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links clearfix">
+			<div class="nav-next"><a href="/compressing-decompressing-multiple-input-arguments-matlaboctave/" rel="next">Compressing and decompressing multiple input arguments in Matlab/Octave</a> <i class="fa fa-long-arrow-right"></i></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+			</div>
+		</div>
+	</div><!-- #content -->
+
+			
+
+	
+	<div id="sidebar-footer" class="footer-widgets widget-area" role="complementary">
+		
+		<div class="container">
+							<div class="sidebar-column col-sm-6 col-xs-12">
+					<aside id="text-4" class="widget widget_text">			<div class="textwidget">This research group is a collaboration between the German Aerospace Center (DLR) and University of Bremen, with funding made possible by the DLR and the Excellence Initiative of the German Research Foundation (DFG).</div>
+		</aside>				</div>
+				
+							<div class="sidebar-column col-sm-2 col-xs-4">
+					<aside id="media_image-5" class="widget widget_media_image"><figure style="width: 100px" class="wp-caption alignnone"><a href="http://www.dlr.de/" target="_blank" rel="noopener noreferrer"><img class="image alignleft" src="/raw/dlrw.svg" alt="" width="100" height="100" /></a><figcaption class="wp-caption-text">German Aerospace Center</figcaption></figure></aside>				</div>
+				
+							<div class="sidebar-column col-sm-2 col-xs-4">
+					<aside id="media_image-6" class="widget widget_media_image"><figure style="width: 100px" class="wp-caption alignnone"><a href="http://www.uni-bremen.de/en.html" target="_blank" rel="noopener noreferrer"><img class="image alignleft" src="/raw/bremenlogow.svg" alt="" width="100" height="100" /></a><figcaption class="wp-caption-text">University of Bremen</figcaption></figure></aside>				</div>
+				
+							<div class="sidebar-column col-sm-2 col-xs-4">
+					<aside id="media_image-8" class="widget widget_media_image"><figure style="width: 100px" class="wp-caption alignnone"><a href="http://www.dfg.de/en/research_funding/programmes/excellence_initiative/index.html" target="_blank" rel="noopener noreferrer"><img class="image alignleft" src="/raw/dfgexcellencew.svg" alt="" width="100" height="100" /></a><figcaption class="wp-caption-text">DFG Excellence Initiative</figcaption></figure></aside>				</div>
+				
+		</div>	
+	</div>	
+
+<!--
+    <a class="go-top"><i class="fa fa-angle-up"></i></a>
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info container">
+			<a href="http://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: <a href="http://athemes.com/theme/sydney" rel="designer">Sydney</a> by aThemes.		</div>
+	</footer> #colophon -->
+</div><!-- #page -->
+
+<!-- YouTube Channel 3 --><script type="4bf30197e06ec44d65413ba0-text/javascript">function ytc_init_MPAU() {jQuery('.ytc-lightbox').magnificPopupAU({disableOn:320,type:'iframe',mainClass:'ytc-mfp-lightbox',removalDelay:160,preloader:false,fixedContentPos:false});}jQuery(window).on('load',function(){ytc_init_MPAU();});jQuery(document).ajaxComplete(function(){ytc_init_MPAU();});</script>	<div style="display:none">
+	</div>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='/wp-content/plugins/jetpack/_inc/build/photon/photon.min.js?ver=20190201'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201933'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='/wp-content/plugins/youtube-channel/assets/lib/magnific-popup/jquery.magnific-popup.min.js?ver=3.0.11.8'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='/wp-content/themes/sydney/js/scripts.js?ver=5.2.2'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='/wp-content/themes/sydney/js/main.min.js?ver=5.2.2'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='/wp-content/themes/sydney/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='/wp-includes/js/wp-embed.min.js?ver=5.2.2'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript" src='https://stats.wp.com/e-201933.js' async='async' defer='defer'></script>
+<script type="4bf30197e06ec44d65413ba0-text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.6',blog:'119721859',post:'878',tz:'0',srv:'pcessflight.com'} ]);
+	_stq.push([ 'clickTrackerInit', '119721859', '878' ]);
+</script>
+
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="4bf30197e06ec44d65413ba0-|49" defer=""></script></body>
+</html>
